@@ -48,3 +48,23 @@ string[] LessThanFourArray(string[] newarray)
         if(newarray[i].Length < QUANTITY) array_two[i] = newarray[i];
     }
     return array_two;
+}
+void ShowArray(string[] newarray)
+{
+    for(int i = 0; i < newarray.Length; i++)
+    {
+        if (newarray[i] != null)
+        {
+            if(i == newarray.Length - 1) Console.Write($"[{newarray[i]}]");
+            else Console.Write($"[{newarray[i]}], ");
+        }
+    }
+    Console.WriteLine();
+}
+
+string[] MyArray = CreateArray();
+Console.Write($"Первый массив: ");
+ShowArray(MyArray);
+Console.Write($"Второй массив: ");
+ShowArray(LessThanFourArray(MyArray));
+
