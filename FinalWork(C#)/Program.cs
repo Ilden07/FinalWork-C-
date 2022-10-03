@@ -25,3 +25,18 @@ int GetArraySizeFromUser()
     }
      return size;
 }
+
+string[] CreateArray()
+{
+    int size = GetArraySizeFromUser();
+    string[] newarray = new string[size];
+    for(int i = 0; i < size; i++)
+    {
+        Console.Write($"Введите {i + 1} элемент массива: ");
+        string? text_array = Console.ReadLine();
+
+        if(text_array == null) newarray[i] = string.Empty;
+        else newarray[i] = text_array;
+    }
+    return newarray;
+}
