@@ -3,9 +3,6 @@
 Первоначальный массив можно ввести с клавиатуры,либо задать на старте выполнения алгоритма. При решение не рекомендуется пользоваться 
 коллекциями,лучше обойтись исключительно массивами */
 
-const int QUANTITY = 4;
-
-
 int GetArraySizeFromUser()
 {
     int size = 0;
@@ -45,7 +42,7 @@ string[] LessThanFourArray(string[] newarray)
     string[] array_two = new string[newarray.Length];
     for(int i = 0; i < newarray.Length; i++)
     {
-        if(newarray[i].Length < QUANTITY) array_two[i] = newarray[i];
+        if(newarray[i].Length < 4) array_two[i] = newarray[i];
     }
     return array_two;
 }
