@@ -40,3 +40,11 @@ string[] CreateArray()
     }
     return newarray;
 }
+string[] LessThanFourArray(string[] newarray)
+{
+    string[] array_two = new string[newarray.Length];
+    for(int i = 0; i < newarray.Length; i++)
+    {
+        if(newarray[i].Length < QUANTITY) array_two[i] = newarray[i];
+    }
+    return array_two;
